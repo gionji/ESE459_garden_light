@@ -4,9 +4,6 @@ control.onEvent(EventBusSource.MICROBIT_ID_IO_P0, EventBusValue.MICROBIT_PIN_EVT
 function stop_recharge_battery () {
 	
 }
-function turn_on_little_light () {
-	
-}
 function start_recharge_battery () {
 	
 }
@@ -35,6 +32,9 @@ function read_sensors () {
         presence = 0
     }
 }
+function turn_on_small_light () {
+	
+}
 function print_on_display () {
     let is_daylight = 0
     OLED.clear()
@@ -51,6 +51,5 @@ let daylight_th = 0
 OLED.init(128, 64)
 daylight_th = 200
 basic.forever(function () {
-    read_sensors()
     basic.pause(100)
 })
